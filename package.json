@@ -1,0 +1,14 @@
+{
+  "name": "mini-vue",
+  "version": "1.0.0",
+  "description": "A mini Vue clone",
+  "main": "minivue.js",
+  "scripts": {
+    "start": "serve -p 3333"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "serve": "^11.3.2"
+  }
+}

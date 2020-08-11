@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>mini vue demo</title>
+  </head>
+  <body>
+    <div id="app">
+      <p>a value {{a.a}}</p>
+      <div>b value {{b}}</div>
+      <span>v-model </span><input type="text" v-model="b">
+      <p>computed value {{helloWorld}}</p>
+      <p>computed value {{name}}</p>
+    </div>
+    <script src="./minivue.js"></script>
+    <script>
+      let vue = new Vue({
+        el: '#app',
+        data: {
+          a: { a: 'is a' },
+          b: 'is b',
+          c: 'is c'
+
+        },
+        // computed 缓存数据，把数据挂在 vm 上
+        computed: {
+          helloWorld() {
+            return this.b + this.c
+          },
+          name: {
+            get() {
+              return this.c + 'getter'
+            }
+          }
+        }
+      })
+    </script>
+  </body>
+</html>
